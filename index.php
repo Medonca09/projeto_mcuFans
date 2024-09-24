@@ -26,9 +26,6 @@
             <a href="/">Inicio</a>
             <a href="#">Informação</a>
             <a href="#">Filmes</a>
-            <a href="#">Contatos</a>
-
-            <button class="btn">Login</button>
         </nav>
     </header>
 
@@ -106,15 +103,18 @@
                 <label>Confirmar Senha</label>
                 <i class="fas fa-lock icone"></i>
             </div>
-            
-            <button type="submit" class="btn">Cadastrar</button>
-        
+            <div class="campos-input">
+                <input type="file" name="profile_photo" accept="image/*" required>
+                <i class="fas fa-camera icone"></i>
+            </div>
+            <button type="submit" class="button-cadastro">Cadastrar</button>
+
             <!-- Botão para voltar ao login -->
             <div class="cadastro">
                 <button type="button" class="btn voltar">Voltar ao Login</button>
             </div>
         </form>
-        
+
     </div>
 
     <script src="JS/app.js"></script>
