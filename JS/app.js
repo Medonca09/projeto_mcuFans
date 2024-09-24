@@ -1,32 +1,50 @@
-// Selecionando os elementos
-const btnLogin = document.querySelector('.navegacao .btn');
-const formFundoLogin = document.querySelector('.fundo_login');
-const iconeSair = document.querySelector('.icone-sair');
-const btnCadastrar = document.querySelector('.cadastro a');
-const loginForm = document.querySelector('.formulario.login-link');
-const cadastroForm = document.querySelector('.formulario.registrar');
+function mostrarFormulario(tipo) {
+    // Esconde ambos os formulários de login e o formulário de cadastro
+    document.getElementById('formulario-usuario').style.display = 'none';
+    document.getElementById('formulario-admin').style.display = 'none';
+    document.querySelector('.cadastro-form').style.display = 'none';
 
-// Função para abrir o formulário de login
-btnLogin.addEventListener('click', () => {
-    formFundoLogin.classList.add('active-btn');
-});
+    // Esconde a escolha de perfil (os botões)
+    document.querySelector('.container h2').style.display = 'none'; // Esconde o título "Escolha seu perfil"
+    document.querySelectorAll('.container .btn').forEach(btn => {
+        btn.style.display = 'none'; // Esconde os botões
+    });
 
-// Função para fechar o formulário de login
-iconeSair.addEventListener('click', () => {
-    formFundoLogin.classList.remove('active-btn');
-});
+    // Exibe o formulário de acordo com o botão clicado
+    if (tipo === 'usuario') {
+        document.getElementById('formulario-usuario').style.display = 'block';
+    } else if (tipo === 'admin') {
+        document.getElementById('formulario-admin').style.display = 'block';
+    }
 
-// Alternar entre o formulário de login e cadastro
-btnCadastrar.addEventListener('click', (e) => {
-    e.preventDefault(); // Previne o comportamento padrão do link
-    loginForm.style.transform = 'translateX(-400px)';
-    cadastroForm.style.transform = 'translateX(0)';
-});
+    // Adiciona eventos para os links de cadastro e voltar ao login
+    configurarEventos();
+}
 
-// Função para voltar ao formulário de login a partir do cadastro
-const linkVoltarLogin = document.querySelector('.formulario.registrar .cadastro p a');
-linkVoltarLogin.addEventListener('click', (e) => {
-    e.preventDefault(); // Previne o comportamento padrão do link
-    loginForm.style.transform = 'translateX(0)';
-    cadastroForm.style.transform = 'translateX(400px)';
-});
+function configurarEventos() {
+    // Evento para abrir o formulário de cadastro
+    document.querySelector('.cadastro p a').addEventListener('click', function (e) {
+        e.preventDefault();
+        mostrarCadastro();
+    });
+
+    // Evento para voltar ao formulário de login
+    document.querySelector('.cadastro-form .btn.voltar').addEventListener('click', function (e) {
+        e.preventDefault();
+        voltarAoLogin();
+    });
+}
+
+function mostrarCadastro() {
+    document.getElementById('formulario-usuario').style.display = 'none'; // Esconde o formulário de login
+    document.getElementById('formulario-admin').style.display = 'none'; // Esconde o formulário de admin
+    document.querySelector('.cadastro-form').style.display = 'block'; // Mostra o formulário de cadastro
+}
+
+function voltarAoLogin() {
+    document.querySelector('.cadastro-form').style.display = 'none'; // Esconde o formulário de cadastro
+    document.querySelector('.container h2').style.display = 'none'; // Exibe o título "Escolha seu perfil"
+    document.querySelectorAll('.container .btn').forEach(btn => {
+        btn.style.display = 'inline-block'; // Mostra os botões de tipo de usuário
+    });
+}
