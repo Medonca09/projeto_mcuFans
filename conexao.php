@@ -1,7 +1,7 @@
 <?php 
 
 $host = 'localhost';
-$dbname = 'mcu_fans_php';
+$dbname = 'projeto_mcu_fans';
 $username = 'root';
 $password = '';
 

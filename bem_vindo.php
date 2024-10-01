@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['usuario_id'])) {
-    header("Location: index.html"); // Redirecionar para o login se não estiver logado
+    header("Location: index.html");
     exit();
 }
 ?>
@@ -24,7 +24,7 @@ if (!isset($_SESSION['usuario_id'])) {
             </h2>
             <div class="nav-links">
                 <img src="<?php echo $_SESSION['foto']; ?>" alt="Foto de Perfil">
-                <a href="#">Home</a>
+                <a href="./index.html">Home</a>
                 <a href="#">Avaliações</a>
                 <a href="logout.php">Logout</a>
             </div>
@@ -32,7 +32,7 @@ if (!isset($_SESSION['usuario_id'])) {
     </header>
     <h3>Conteúdo da Tela de Boas-Vindas</h3>
     <div class="contents">
-        <!-- Aqui você pode adicionar mais conteúdo -->
+        
     </div>
 </body>
 
