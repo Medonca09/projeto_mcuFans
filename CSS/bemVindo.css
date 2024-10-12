@@ -54,6 +54,32 @@ h3 {
     margin-top: 2rem;
 }
 
-.contents {
-    background-color: #000;
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    text-align: center;
+    width: 200px; /* Largura do card */
+    display: inline-block; /* Exibir cards em linha */
+    vertical-align: top; /* Alinhamento vertical */
+}
+
+.card img {
+    max-width: 100%; /* Imagem responsiva */
+    height: auto; /* Altura automática */
+    border-radius: 8px;
+}
+
+.card button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    cursor: pointer; /* Mão ao passar o mouse */
+}
+
+.card button:hover {
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */
 }
