@@ -28,19 +28,25 @@ $result = mysqli_query($conn, $sql);
                 <img src="<?php echo $_SESSION['foto']; ?>" alt="Foto de Perfil">
                 <a href="./index.html">Home</a>
                 <a href="#">Avaliações</a>
-                <a href="logout.php">Logout</a>
+                <a href="logout.php">Sair</a>
             </div>
         </nav>
     </header>
-    <h3>Conteúdo da Tela de Boas-Vindas</h3>
-    <div class="contents">
+    <div class="text">
+        <h3>Lista de Filmes</h3>
+    </div>
+    <div class="container">
         <?php
         if (mysqli_num_rows($result) > 0) {
             while ($filme = mysqli_fetch_assoc($result)) {
                 echo "<div class='card'>";
+                echo "<div class='card-content'>";
+                echo "<img src='Assets/" . $filme['imagem'] . "' alt='Imagem do filme'>";
+                echo "<div class='overlay'>";
                 echo "<h3>" . $filme['titulo'] . "</h3>";
-                echo "<img src='assets/" . $filme['imagem'] . "' alt='Imagem do filme'><br>";
                 echo "<button onclick=\"location.href='avaliar_filme.php?id=" . $filme['id'] . "'\">Avaliar Filme</button>";
+                echo "</div>";
+                echo "</div>";
                 echo "</div>";
             }
         } else {

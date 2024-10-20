@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel do Administrador - MCU Fans</title>
     <link rel="shortcut icon" href="../Assets/marvelLogo.png" type="image/x-icon">
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/admDashboard.css">
 </head>
 <body>
     <header>
         <h2>Bem-vindo, Administrador</h2>
-        <nav>
+        <nav class="navegacao">
             <a href="./adicionarFilme.php">Adicionar Filme</a>
-            <a href="gerenciar_filmes.php">Gerenciar Filmes</a>
-            <a href="logout.php">Logout</a>
+            <a href="listar_filmes.php">Gerenciar Filmes</a>
+            <a href="logout_adm.php">Sair</a>
         </nav>
     </header>
 

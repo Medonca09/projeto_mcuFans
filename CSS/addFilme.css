@@ -13,14 +13,20 @@ body {
     align-items: center;
     background: url('../Assets/AvengersEndGame.jpg') no-repeat bottom center scroll;
     min-height: 100vh;
-    width: 50vw;
+    width: 100vw;
     height: 100vh;
     background-size: cover;
     
 }
 
+.container {
+    width: 90%;
+    max-width: 500px;
+    margin: 20px;
+}
+
 form {
-    padding: 40px;
+    padding: 20px;
     background-color: transparent;
     backdrop-filter: blur(30px);
     border-radius: 10px;
@@ -73,12 +79,32 @@ form {
     font-weight: 700;
 }
 
-input {
-    padding: 10px 20px;
+input[type="text"], 
+input[type="date"], 
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+}
+
+.adicionar input[type='submit'] {
+    padding: 10px;
+    align-self: center;
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    text-align: center;
+    width: 160px;
     border-radius: 10px;
     border: none;
-    background-color: #f1f1f1;
-    text-decoration: none;
+    cursor: pointer;
+    background-color: #f50e0e;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 .adicionar input[type='submit']:hover {
