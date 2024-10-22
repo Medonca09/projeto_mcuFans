@@ -28,10 +28,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
         $nova_imagem = $_FILES['imagem']['name'];
-        $caminho_imagem = 'Assets/' . basename($nova_imagem);
+        $caminho_imagem = '../Assets/' . basename($nova_imagem);
 
         if (move_uploaded_file($_FILES['imagem']['tmp_name'], $caminho_imagem)) {
-            $imagem = $nova_imagem;
+            $imagem = basename($nova_imagem);
         } else {
             echo "Erro ao fazer upload da nova imagem.";
         }

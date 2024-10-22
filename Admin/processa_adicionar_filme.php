@@ -1,5 +1,5 @@
 <?php
-include 'C:/xampp/htdocs/pidw/mcuFans/conexao.php';
+include '../conexao.php';
 
 if (!$conn) {
     die("Falha na conexão com o banco de dados: " . mysqli_connect_error());
@@ -15,11 +15,11 @@ if (isset($_POST['titulo'], $_POST['descricao'], $_POST['data_lancamento'], $_PO
 
     if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
         $imagem = $_FILES['imagem']['name'];
-        $caminho_imagem = 'C:\xampp\htdocs\pidw\mcuFans\Assets' . basename($imagem);
+        $caminho_imagem = '../Assets/' . basename($imagem);
 
         if (move_uploaded_file($_FILES['imagem']['tmp_name'], $caminho_imagem)) {
             $sql = "INSERT INTO filmes (titulo, descricao, data_lancamento, diretor, genero, imagem) 
-                    VALUES ('$titulo', '$descricao', '$data_lancamento', '$diretor', '$genero', '$imagem')";
+                    VALUES ('$titulo', '$descricao', '$data_lancamento', '$diretor', '$genero', '$caminho_imagem')";
 
             if (mysqli_query($conn, $sql)) {
                 echo "Filme adicionado com sucesso!";
