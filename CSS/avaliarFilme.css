@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+header h2 {
+    margin: 0;
+}
+
+.filme-detalhes {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filme-detalhes img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.filme-detalhes p {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.rating {
+    display: flex;
+    gap: 5px;
+    font-size: 24px;
+}
+
+.star {
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.star.selected,
+.star:hover,
+.star:hover ~ .star {
+    color: gold;
+}
+
+.avaliacao-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    height: 150px;
+}
+
+.avaliacao-form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.avaliacao-form button:hover {
+    background-color: #555;
+}
+
+.comentarios {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comentarios h3 {
+    margin-top: 0;
+}
+
+.comentario {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.comentario:last-child {
+    border-bottom: none;
+}
+
+.comentario strong {
+    display: block;
+    font-size: 14px;
+    color: #555;
+}
+
+.comentario span {
+    font-size: 14px;
+    color: #999;
+}
+
+.comentario p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.comentario small {
+    font-size: 12px;
+    color: #999;
+}
