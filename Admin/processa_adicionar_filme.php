@@ -22,7 +22,25 @@ if (isset($_POST['titulo'], $_POST['descricao'], $_POST['data_lancamento'], $_PO
                     VALUES ('$titulo', '$descricao', '$data_lancamento', '$diretor', '$genero', '$caminho_imagem')";
 
             if (mysqli_query($conn, $sql)) {
-                echo "Filme adicionado com sucesso!";
+                echo '
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/sucesso.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="fundoDark"></div>
+        <div class="formulario">
+            <h1>Filme adicionado com sucesso!</h1>
+            <h3><a href="./Admin/listar_filmes.php">Ver filmes disponiveis</a></h3>
+        </div>
+    </div>
+</body>
+
+</html>';
             } else {
                 echo "Erro ao adicionar filme: " . mysqli_error($conn);
             }

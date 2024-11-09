@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../Assets/avengers.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.fundoDark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.formulario {
+    background: transparent;
+    border: 2px solid rgba(143, 143, 143, 0.5);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    padding: 30px 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .6);
+    z-index: 1;
+    width: 80%;
+    max-width: 600px;
+}
+
+.formulario h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="file"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+}
+
+form input[type="file"] {
+    padding: 8px;
+}
+
+form input[type="submit"] {
+    padding: 12px 20px;
+    background-color: #f50101;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #b30404;
+}
+
+.foto-atual {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.foto-atual img {
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.foto-atual p {
+    text-align: center;
+    color: #fff;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #f50101;
+    border: 2px solid #f50101;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+button:hover {
+    background-color: #f50101;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .formulario {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .foto-atual img {
+        width: 80px;
+        height: 80px;
+    }
+}

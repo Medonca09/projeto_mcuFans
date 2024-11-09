@@ -17,6 +17,7 @@ header {
 
 header h2 {
     margin: 0;
+    padding: 1.5rem;
 }
 
 .filme-detalhes {
@@ -137,4 +138,21 @@ textarea {
 .comentario small {
     font-size: 12px;
     color: #999;
+}
+
+.comentarios-interacoes {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.comentarios-interacoes span {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.comentarios-interacoes span:hover {
+    color: #f50101;
 }

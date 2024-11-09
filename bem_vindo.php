@@ -25,7 +25,7 @@ $result = mysqli_query($conn, $sql);
         <nav>
             <h2>Bem-vindo, <?php echo $_SESSION['nome']; ?>!</h2>
             <div class="nav-links">
-                <img src="<?php echo $_SESSION['foto']; ?>" alt="Foto de Perfil">
+                <img src="<?php echo $_SESSION['foto']; ?>" alt="Foto de Perfil" id="foto-perfil" style="cursor: pointer;">
                 <a href="./index.html">Home</a>
                 <a href="#">Avaliações</a>
                 <a href="logout.php">Sair</a>
@@ -54,6 +54,18 @@ $result = mysqli_query($conn, $sql);
         }
         ?>
     </div>
+
+    <div id="modal-foto" class="modal">
+        <div class="modal-content">
+            <img src="<?php echo $_SESSION['foto']; ?>" alt="Foto do Usuário em Tamanho Grande">
+            <div class="modal-buttons">
+                <button onclick="fecharModal()">Cancelar</button>
+                <button onclick="location.href='editar_perfil.php'">Editar Perfil</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="JS/modalFotoUsuario.js"></script>
 </body>
 
 </html>
