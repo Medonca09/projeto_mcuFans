@@ -27,7 +27,7 @@ $result = mysqli_query($conn, $sql);
             <div class="nav-links">
                 <img src="<?php echo $_SESSION['foto']; ?>" alt="Foto de Perfil" id="foto-perfil" style="cursor: pointer;">
                 <a href="./index.html">Home</a>
-                <a href="#">Avaliações</a>
+                <a href="fases.php">Avaliações</a>
                 <a href="logout.php">Sair</a>
             </div>
         </nav>
