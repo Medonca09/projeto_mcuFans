@@ -68,7 +68,7 @@ nav .nav-links {
 
 .card {
     position: relative;
-    width: 200px;
+    width: 250px;
     overflow: hidden;
     border: none;
     border-radius: 10px;
@@ -107,13 +107,15 @@ nav .nav-links {
 button {
     margin-top: 10px;
     padding: 10px 15px;
-    background-color: #ff0000;
-    color: white;
+    background-color: #fff;
+    color: #000;
     border: none;
     cursor: pointer;
     border-radius: 10px;
 }
 
 button:hover {
-    background-color: #890202;
+    background-color: #af0505;
+    color: #fff;
+    transition: .3s;
 }

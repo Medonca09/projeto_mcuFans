@@ -52,39 +52,63 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/editarFilme.css">
+    <link rel="shortcut icon" href="../Assets/marvelLogo.png" type="image/x-icon">
     <title>Editar Filme</title>
 </head>
+
 <body>
 
-<h2>Editar Filme</h2>
 
-<form action="editar_filme.php?id=<?php echo $filme['id']; ?>" method="post" enctype="multipart/form-data">
-    <label for="titulo">Título:</label>
-    <input type="text" name="titulo" value="<?php echo $filme['titulo']; ?>" required><br><br>
+    <div class="container">
+        <div class="fundoDark"></div>
+        <form action="editar_filme.php?id=<?php echo $filme['id']; ?>" method="post" enctype="multipart/form-data">
+            <div class="titulo">
+                <h2>Editar Filme</h2>
+            </div>
+            <div class="barra"></div>
 
-    <label for="descricao">Descrição:</label>
-    <textarea name="descricao" required><?php echo $filme['descricao']; ?></textarea><br><br>
+            <div class="campos-input">
+                <label for="titulo">Título:</label>
+                <input type="text" name="titulo" value="<?php echo $filme['titulo']; ?>" required><br><br>
+            </div>
 
-    <label for="data_lancamento">Data de Lançamento:</label>
-    <input type="date" name="data_lancamento" value="<?php echo $filme['data_lancamento']; ?>" required><br><br>
+            <div class="campos-input">
+                <label for="descricao">Descrição:</label>
+                <textarea name="descricao" required><?php echo $filme['descricao']; ?></textarea><br><br>
+            </div>
 
-    <label for="diretor">Diretor:</label>
-    <input type="text" name="diretor" value="<?php echo $filme['diretor']; ?>" required><br><br>
+            <div class="campus-input">
+                <label for="data_lancamento">Data de Lançamento:</label>
+                <input type="date" name="data_lancamento" value="<?php echo $filme['data_lancamento']; ?>" required><br><br>
+            </div>
 
-    <label for="genero">Gênero:</label>
-    <input type="text" name="genero" value="<?php echo $filme['genero']; ?>"><br><br>
+            <div class="campus-input">
+                <label for="diretor">Diretor:</label>
+                <input type="text" name="diretor" value="<?php echo $filme['diretor']; ?>" required><br><br>
+            </div>
 
-    <label for="imagem">Imagem do Filme:</label>
-    <input type="file" name="imagem"><br><br>
-    <img src="Assets/<?php echo $filme['imagem']; ?>" width="150"><br><br>
+            <div class="campus-input">
+                <label for="genero">Gênero:</label>
+                <input type="text" name="genero" value="<?php echo $filme['genero']; ?>"><br><br>
+            </div>
 
-    <button type="submit">Salvar Alterações</button>
-</form>
+            <div class="campus-input">
+                <label for="imagem">Imagem do Filme:</label>
+                <input type="file" name="imagem"><br><br>
+                <img src="../Assets/<?php echo $filme['imagem']; ?>" width="150"><br><br>
+            </div>
 
-<a href="listar_filmes.php">Voltar à Lista de Filmes</a>
+            <div class="salvar">
+                <button type="submit">Salvar Alterações</button>
+            </div>
+        </form>
+    </div>
 
 </body>
+
 </html>
