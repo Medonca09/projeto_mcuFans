@@ -12,7 +12,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #f50101;
+    background-color: #1c1c1c;
     padding: 1.5rem;
 }
 
@@ -36,7 +36,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #a00202;
+    background-color: #323131;
     color: #FFF;
     transition: 0.3s;
     border-radius: 10px;
@@ -62,7 +62,7 @@ nav .nav-links {
 }
 
 .modal-content {
-    background-color: #fff;
+    background-color: #1c1c1c;
     padding: 20px;
     border-radius: 10px;
     text-align: center;

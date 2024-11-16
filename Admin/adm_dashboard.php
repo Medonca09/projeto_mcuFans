@@ -12,7 +12,8 @@
         <h2>Bem-vindo, Administrador</h2>
         <nav class="navegacao">
             <a href="./adicionarFilme.php">Adicionar Filme</a>
-            <a href="listar_filmes.php">Gerenciar Filmes</a>
+            <a href="./listar_filmes.php">Filmes</a>
+            <a href="../Admin/gerenciar_comentarios.php">Comentários</a>
             <a href="logout_adm.php">Sair</a>
         </nav>
     </header>

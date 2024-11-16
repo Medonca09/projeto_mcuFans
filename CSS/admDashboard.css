@@ -17,7 +17,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #f50101;
+    background-color: #1c1c1c;
     color: #FFF;
 }
 
@@ -37,7 +37,7 @@ header {
     bottom: -6px;
     left: 0;
     height: 2px;
-    background: #000000;
+    background: #e60303;
     transform: scaleX(0);
     transform-origin: right;
     transition: transform .4s;
