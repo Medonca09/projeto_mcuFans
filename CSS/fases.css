@@ -11,6 +11,35 @@ body {
     color: #fff;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+    background-color: #1c1c1c;
+}
+
+.logo {
+    font-size: 2.3rem;
+    color: #FFF;
+    user-select: none;
+    cursor: pointer;
+}
+
+.navegacao a {
+    position: relative;
+    font-size: 1.1rem;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
 .wrapper {
     padding: 10px 10%;
 }
@@ -62,7 +91,7 @@ body {
     font-weight: 500;
     margin-bottom: 5px;
     margin-top: 80%;
-    font-family: bebas neue;
+    font-family: 'Poppins';
     font-size: 30px;
     letter-spacing: 2px;
 }
