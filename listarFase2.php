@@ -2,10 +2,9 @@
 
 include './conexao.php';
 
-$ids_filmes = [1, 2, 3, 4, 5, 6];
+$ids_filmes = [7, 8, 9, 10];
 
 $ids_filmes_str = implode(',', $ids_filmes);
-
 
 $sql_filmes = "SELECT * FROM filmes WHERE id IN ($ids_filmes_str)";
 $result_filmes = mysqli_query($conn, $sql_filmes);
