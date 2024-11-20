@@ -33,7 +33,7 @@ $result = mysqli_query($conn, $sql);
         </nav>
     </header>
     <div class="text">
-        <h3>Lista de Filmes</h3>
+        <h3>Catálogo de Filmes</h3>
     </div>
     <div class="container">
         <?php
