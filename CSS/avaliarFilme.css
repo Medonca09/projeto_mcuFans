@@ -37,11 +37,17 @@ header h2 {
     margin-right: 20px;
 }
 
+.filme-detalhes div { 
+    display: flex; /* Configura flex para o container dos textos */
+    flex-direction: column; /* Organiza os parágrafos em coluna (um abaixo do outro) */
+}
+
 .filme-detalhes p {
     flex: 1;
     font-size: 16px;
     line-height: 1.5;
-    margin: 0;
+    margin: 5px 0;
+    display: block;
 }
 
 .rating {

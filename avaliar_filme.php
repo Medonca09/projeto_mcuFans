@@ -58,7 +58,12 @@ $result_avaliacoes = mysqli_query($conn, $sql_avaliacoes);
 
     <div class="filme-detalhes">
         <img src="Assets/<?php echo $filme['imagem']; ?>" alt="Imagem do filme">
-        <p><?php echo $filme['descricao']; ?></p>
+        <div>
+            <p><strong>Descrição:</strong> <?php echo $filme['descricao']; ?></p>
+            <p><strong>Ano de Lançamento:</strong><?php echo date('d/m/Y', strtotime($filme['data_lancamento'])); ?></p>
+            <p><strong>Gênero:</strong> <?php echo $filme['genero']; ?></p>
+            <p><strong>Diretor:</strong> <?php echo $filme['diretor']; ?></p>
+        </div>
     </div>
 
     <div class="avaliacao-form">

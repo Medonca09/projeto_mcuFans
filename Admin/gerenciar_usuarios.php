@@ -40,5 +40,5 @@ if (!$result) {
         <?php endwhile; ?>
     </div>
 </body>
-
+<script src="../JS/curtidas.js"></script>
 </html>

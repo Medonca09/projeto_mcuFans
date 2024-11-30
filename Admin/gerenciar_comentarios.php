@@ -53,7 +53,7 @@ $resultado = mysqli_query($conn, $sql);
                         <p>
                             comentou no filme: <span class="filme"><?php echo $row['nome_filme']; ?></span>
                         </p>
-                        <p><?php echo $row['comentario']; ?></p>
+                        <p>"<?php echo $row['comentario']; ?>"</p>
                         <span class="data"><?php echo date('d/m/Y H:i', strtotime($row['data_avaliacao'])); ?></span>
                     </div>
                 </div>
