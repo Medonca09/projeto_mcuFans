@@ -1,7 +1,12 @@
 <?php
 include '../conexao.php';
 
-$query = "SELECT foto, nome, data_cadastro FROM usuarios_comuns";
+$query = "
+    SELECT u.foto, u.nome, u.data_cadastro, COUNT(a.id) AS comentarios
+    FROM usuarios_comuns u
+    LEFT JOIN avaliacoes a ON u.id = a.id_usuario
+    GROUP BY u.id
+";
 $result = mysqli_query($conn, $query);
 
 if (!$result) {
@@ -36,9 +41,10 @@ if (!$result) {
                 <img src="../<?php echo $usuario['foto'] ?: 'default.png'; ?>" alt="Foto do usuário">
                 <h3><?php echo htmlspecialchars($usuario['nome']); ?></h3>
                 <p>Data de Cadastro: <?php echo date('d/m/Y', strtotime($usuario['data_cadastro'])); ?></p>
+                <p>Quantidade de Comentários: <?php echo $usuario['comentarios']; ?></p>
             </div>
         <?php endwhile; ?>
     </div>
 </body>
-<script src="../JS/curtidas.js"></script>
+
 </html>
