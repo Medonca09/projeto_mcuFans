@@ -2,7 +2,7 @@
 
 include './conexao.php';
 
-$ids_filmes = [];
+$ids_filmes = [32, 33, 34];
 
 $ids_filmes_str = implode(',', $ids_filmes);
 
