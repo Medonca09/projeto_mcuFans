@@ -5,15 +5,21 @@ include '../conexao.php';
 $queryUsuarios = "SELECT COUNT(*) AS total FROM usuarios_comuns";
 $queryComentarios = "SELECT COUNT(*) AS total FROM avaliacoes";
 $queryFilmes = "SELECT COUNT(*) AS total FROM filmes";
+$queryMediaAvaliacoes = "SELECT AVG(nota) AS media FROM avaliacoes";
 
 $resultUsuarios = mysqli_query($conn, $queryUsuarios);
 $resultComentarios = mysqli_query($conn, $queryComentarios);
 $resultFilmes = mysqli_query($conn, $queryFilmes);
+$resultMediaAvaliacoes = mysqli_query($conn, $queryMediaAvaliacoes);
 
 $totalUsuarios = mysqli_fetch_assoc($resultUsuarios)['total'];
 $totalComentarios = mysqli_fetch_assoc($resultComentarios)['total'];
 $totalFilmes = mysqli_fetch_assoc($resultFilmes)['total'];
+$mediaAvaliacoes = mysqli_fetch_assoc($resultMediaAvaliacoes)['media'];
+
+$mediaAvaliacoes = $mediaAvaliacoes !== null ? number_format($mediaAvaliacoes, 2) : "Sem avaliações";
 ?>
+
 
 
 
@@ -45,6 +51,11 @@ $totalFilmes = mysqli_fetch_assoc($resultFilmes)['total'];
                 <h4>Usuários</h4>
                 <p id="total-usuarios"><?php echo $totalUsuarios; ?></p>
                 <button onclick="location.href='./gerenciar_usuarios.php'">Gerenciar Usuários</button>
+            </div>
+            <div class="card">
+                <h4>Média de Avaliações</h4>
+                <p id="media-avaliacoes"><?php echo $mediaAvaliacoes; ?></p>
+                <button onclick="location.href='./media_avaliacoes.php'">Ver Detalhes</button>
             </div>
             <div class="card">
                 <h4>Comentários</h4>
